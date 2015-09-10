@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="public" namespace="/" extends="struts-default">
+
+		<action name="Login">
+			<result>/Login.jsp</result>
+		</action>
+
+		<action name="Authentication" class="com.minkin.action.Authentication">
+			<result name="success" type="redirect">/private/MyPage.action</result>
+			<result name="input">/Login.jsp</result>
+		</action>
+
+		<action name="Registr" class="com.minkin.action.RegistrUser">
+			<result>/Registr.jsp</result>
+
+		</action>
+
+	</package>
+
+	<package name="private" namespace="/private" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="authenticationInterceptor"
+				class="com.minkin.action.AuthenticationInterceptor" />
+			<interceptor-stack name="privateStack">
+				<interceptor-ref name="authenticationInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="privateStack" />
+
+		<global-results>
+			<result name="login" type="redirect">/Login.action</result>
+		</global-results>
+
+		<action name="MyPage">
+			<result>/private/MyPage.jsp</result>
+		</action>
+	</package>
+
+</struts>
