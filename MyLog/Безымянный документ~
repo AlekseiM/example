@@ -1,0 +1,4 @@
+
+consolHandler = true
+fileHandler = true
+rotationFile = true

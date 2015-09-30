@@ -1,0 +1,30 @@
+# Log
+# возможность ротации файлов лога (true / false)
+rotationFile = true
+# задаем размер файла вывода лога 
+fileSize = 300
+#задаем количество файлов для ротации лога
+amountFileRotation = 6
+# задаем форрмат вывода даты( yyyy.MM.dd HH:mm:ss z / HH:mm.ss )
+formatDate = yyyy.MM.dd HH:mm:ss z
+# задаем уровень логирования(com.minkin.level.DebugLevel / com.minkin.level.InfoLevel / com.minkin.level.ErrorLevel)
+level = com.minkin.level.DebugLevel
+# задаем аппендер
+AppenderConsol= com.minkin.appender.AppenderConsol
+AppenderText = com.minkin.appender.AppenderText
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
