@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="FileSocet" default="all">
+
+	<target name="make_dirs" description="Make some dirs">
+		<mkdir dir="build" />
+		<mkdir dir="build/classes" />
+	</target>
+
+	<target name="compile" description="compile java" depends="make_dirs">
+		<javac destdir="build/classes">
+			<src path="src/main/java" />
+		</javac>
+	</target>
+
+	<target name="makeClientjar" description="make jar file"
+		depends="compile">
+		<jar destfile="build/FileClient.jar">
+			<fileset dir="build/classes">
+				<include name="**/FileClient.class" />
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="com.minkin.FileSocket.FileClient" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="makeServerjar" description="make jar file"
+		depends="makeClientjar">
+		<jar destfile="build/FileServer.jar">
+			<fileset dir="build/classes">
+				<include name="**/*.class" />
+				<exclude name="**/FileClient.class" />
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="com.minkin.FileSocket.FileServer" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="all" description="Do the build" depends="makeServerjar" />
+
+</project>
+
