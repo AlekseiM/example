@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shapes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="shapes.xsd">
+
+	<triangle>
+		<color>red</color>
+		<side>1.5</side>
+		<side>1.5</side>
+		<side>1.5</side>
+	</triangle>
+	<rectangle>
+		<color>black</color>
+		<side>2.0</side>
+		<side>3.5</side>
+	</rectangle>
+	<square>
+		<color>green</color>
+		<side>2.5</side>
+	</square>
+	<circle>
+		<color>orange</color>
+		<diameter>1.5</diameter>
+	</circle>
+	<triangle>
+		<color>white</color>
+		<side>2.5</side>
+		<side>3.5</side>
+		<side>1.5</side>
+	</triangle>
+
+	<triangle>
+		<color>blue</color>
+		<side>1.0</side>
+		<side>1.5</side>
+		<side>1.5</side>
+	</triangle>
+
+	<rectangle>
+		<color>black</color>
+		<side>4.0</side>
+		<side>3.5</side>
+	</rectangle>
+	<square>
+		<color>green</color>
+		<side>2.9</side>
+	</square>
+	<circle>
+		<color>orange</color>
+		<diameter>1.5</diameter>
+	</circle>
+	<triangle>
+		<color>white</color>
+		<side>2.5</side>
+		<side>3.5</side>
+		<side>2.5</side>
+	</triangle>
+
+	<triangle>
+		<color>blue</color>
+		<side>1.5</side>
+		<side>2.5</side>
+		<side>1.5</side>
+	</triangle>
+</shapes>
